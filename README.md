@@ -45,8 +45,8 @@ npx prisma migrate dev --name init
 npm run start:dev
 ```
 
-The API will be available at `http://localhost:3000`.
-Swagger documentation is available at `http://localhost:3000/api/docs`.
+The API will be available at `http://localhost:3001`.
+Swagger documentation is available at `http://localhost:3001/api/docs`.
 
 ### 3. Frontend Initialization
 
@@ -57,13 +57,13 @@ cd frontend
 npm install
 
 # Create a .env.local file
-echo "NEXT_PUBLIC_API_URL=http://localhost:3000" > .env.local
+echo "NEXT_PUBLIC_API_URL=http://localhost:3001" > .env.local
 
 # Start the development server
 npm run dev
 ```
 
-The frontend will be available at `http://localhost:3001` (or 3000 depending on what port Next.js chooses).
+The frontend will be available at `http://localhost:3001` (or 3001 depending on what port Next.js chooses).
 
 ## Project Structure
 
