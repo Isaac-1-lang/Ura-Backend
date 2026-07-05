@@ -12,16 +12,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { NotificationsModule } from './notifications/notifications.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { CacheModule } from '@nestjs/cache-manager';
-import * as redisStore from 'cache-manager-redis-store';
 
 @Module({
   imports: [
     PrismaModule,
     CacheModule.register({
       isGlobal: true,
-      store: redisStore,
-      host: process.env.REDIS_HOST || 'localhost',
-      port: parseInt(process.env.REDIS_PORT, 10) || 6379,
     }),
     AuthModule, UsersModule, OrganizationsModule, ProjectsModule, BeneficiariesModule, DistributionsModule, ReportsModule, DashboardModule, NotificationsModule
   ],

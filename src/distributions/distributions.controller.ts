@@ -17,7 +17,7 @@ export class DistributionsController {
 
   @Post()
   @Roles(Role.ADMIN, Role.FIELD_AGENT)
-  create(@Body() createDistributionDto: CreateDistributionDto, @Request() req) {
+  create(@Body() createDistributionDto: CreateDistributionDto, @Request() req: any) {
     return this.distributionsService.create(createDistributionDto, req.user.id);
   }
 

@@ -17,7 +17,7 @@ export class NotificationsController {
   }
 
   @Get()
-  findMyNotifications(@Request() req) {
+  findMyNotifications(@Request() req: any) {
     return this.notificationsService.findByRecipient(req.user.id);
   }
 
